@@ -48,6 +48,18 @@ export function Grid({ cols, className, children }: { cols: keyof typeof gridCol
 }
 
 /** Two-column layout that stacks below the lg breakpoint. */
-export function Split({ className, children }: { className?: string; children: ReactNode }) {
-  return <div className={cn("grid items-center gap-10 lg:grid-cols-2 lg:gap-14", className)}>{children}</div>;
+export function Split({
+  align = "center",
+  className,
+  children,
+}: {
+  align?: "center" | "start";
+  className?: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className={cn("grid gap-10 lg:grid-cols-2 lg:gap-14", align === "center" ? "items-center" : "items-start", className)}>
+      {children}
+    </div>
+  );
 }
