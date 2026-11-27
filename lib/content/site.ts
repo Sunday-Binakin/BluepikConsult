@@ -17,10 +17,10 @@ export type NavItem = { href: string; label: string };
 export const mainNav: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/training", label: "Online Training" },
+  { href: "/training", label: "Training" },
   { href: "/consulting", label: "Consulting" },
   { href: "/who-we-work-with", label: "Who We Work With" },
-  { href: "/contact", label: "Contact" },
+  { href: "/projects", label: "Projects" },
 ];
 
 export const footerNav: { title: string; links: NavItem[] }[] = [
@@ -30,6 +30,7 @@ export const footerNav: { title: string; links: NavItem[] }[] = [
       { href: "/", label: "Home" },
       { href: "/about", label: "About Us" },
       { href: "/who-we-work-with", label: "Who We Work With" },
+      { href: "/projects", label: "Projects" },
       { href: "/contact", label: "Contact" },
     ],
   },

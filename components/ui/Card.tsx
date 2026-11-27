@@ -6,6 +6,7 @@ import { Heading } from "./Typography";
 const cardTones = {
   default: "border-brand-line bg-white",
   flat: "border-transparent bg-white", // on tinted sections
+  cloud: "border-transparent bg-brand-cloud", // on white sections
   navy: "border-brand-navy bg-brand-navy text-brand-haze",
 } as const;
 
