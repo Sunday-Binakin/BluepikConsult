@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Brand tokens — every colour comes from the BluePik logo.
+   Use them as Tailwind classes: bg-brand-navy, text-brand-blue …
+---------------------------------------------------------------- */
+@theme {
+  --color-brand-navy: #043f8d;
+  --color-brand-blue: #0b7be8;
+  --color-brand-slate: #646a72;
+  --color-brand-ink: #0a2147;
+  --color-brand-body: #3d4652;
+  --color-brand-mist: #eaf2fc;
+  --color-brand-cloud: #f6f8fb;
+  --color-brand-line: #dce4ef;
+  --color-brand-sky: #8ec2ff; /* eyebrow text on navy */
+  --color-brand-haze: #d3e2f7; /* body text on navy */
+  --color-whatsapp: #1fa855;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Typography scale (fluid). Reused through the Heading component. */
+@utility text-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.125rem, 4.6vw, 3.625rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+@utility text-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3.2vw, 2.625rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+@utility text-subtitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.1875rem, 1.7vw, 1.4375rem);
+  line-height: 1.25;
+}
+@utility text-lead {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  line-height: 1.65;
+}
+@utility text-eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-sans text-[17px] leading-relaxed text-brand-body antialiased max-md:text-base;
+  }
+  :focus-visible {
+    @apply outline-3 outline-offset-2 outline-brand-blue;
+  }
+}
